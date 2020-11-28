@@ -1,12 +1,11 @@
 let space = " ";
-let n = 7;
+let n = 19;
 let asterix = "*";
 let linha = "";
 let Space = "";
 let OutsideSpaceTimes = Math.ceil(n/2);
 let InsideSpace = 1;
 let counter = 0;
-let teste = "T";
 
 for (let indexLine = 1; indexLine <= (Math.floor(n/2)); indexLine ++ ) {
         
@@ -21,14 +20,22 @@ for (let indexLine = 1; indexLine <= (Math.floor(n/2)); indexLine ++ ) {
         //for (IndexSpace = 1; IndexSpace <= OutsideSpaceTimes ; IndexSpace ++){
         //                        linha = (linha + space);
         //}   
+        counter = (counter +1);
+        if (counter == 1) {
+                teste = 0
+        } else if (counter == 2) {
+                linha = (linha + space + asterix); 
+        } else {
+                linha = (linha + space);
+                for (let IndexInside = 2; IndexInside < counter ; IndexInside ++) {
+                     linha = (linha + space + space);
+                }
+                linha = (linha + asterix);
+        } 
         console.log(linha);
         linha = "";  
-        counter = (counter + 1);
+        
 }
-
-
-
-
 //asteriscos da ultima linha
 for (let IndexFinal = 1; IndexFinal <= n; IndexFinal ++){
         linha = (linha + asterix);
