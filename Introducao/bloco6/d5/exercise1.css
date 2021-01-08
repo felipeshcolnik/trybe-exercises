@@ -1,4 +1,7 @@
 body {
+  text-align: justify;
+  background-color: yellowgreen;
+  margin: 0 30px;
   
 }
 
@@ -26,5 +29,9 @@ figure {
   p {
     font-size: large
   }
-
 }
+
+@media screen and (max-width:1400px) and (min-width:800px) {
+  .figure-wrap {
+    display: flex;
+  }
