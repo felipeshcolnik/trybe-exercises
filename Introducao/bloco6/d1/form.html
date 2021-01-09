@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="/bootstrap-5.0.0-beta1-dist/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <link href="style.css" rel="stylesheet" type="text/css>
   <title>Formulario CV</title>
-  <link href="style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
   <main>
@@ -13,36 +14,39 @@
     <form action="" method="get">
       <fieldset class="personal-info" class="form">
         <legend>Informacoes Pessoais</legend>
-        <div class=info-name>
+
+        <div class='info-name form-group input-group mb-3'>
           <label for="nome">Nome</label>
           <input type="text" name="name" id="nome" maxlength="40" required>
           <br>
         </div>
-        <div class='form-group'>
+
+        <div class='form-group input-group mb-3'>
           <label for="correioEletronico">E-mail</label>
-          <input class='form-control' type="email" name="email" id="correioEletronico" maxlength="50" required>
+          <input class='email-input form-control' type="email" name="email" id="correioEletronico" maxlength="50" required>
+          <span class="input-group-text" id="basic-addon2">@example.com</span>
           <br>
         </div>
-        <div class="form-group">
+        <div class="form-group input-group mb-3">
           <label for="cpf">CPF:</label>
-          <input class='form-control' type="text" name="cpf" id="cpf" maxlength="11" required>
+          <input class='form-control ' type="text" name="cpf" id="cpf" maxlength="11" required>
           <br>
         </div>
-        <div class="form-group">
+        <div class="form-group input-group mb-3">
           <label for="endereco">Endereco:</label>
           <input type="text" name="adress" id="endereco" maxlength="200" required>
           <br>
         </div>
-        <div class="form-group">
+        <div class="form-group input-group mb-3">
           <label for="cidade">Cidade:</label>
           <input type="text" name="city" id="cidade" maxlength="28" required>
           <br>
         </div>
-        <div class="form-group">
+        <div class="form-group input-group mb-3">
           <label for="estado">Estado:</label>
           <select class='form-control' type="text" name="state" id="estado" required></select>
         </div>
-        <div class="form-group">
+        <div class="form-group input-group mb-3">
           <p>Tipo de habitacao:</p> 
           <label for="casa">Casa</label>
           <input type="radio" name="home" id="casa" namechecked="checked">
@@ -51,7 +55,7 @@
         </div>    
       </fieldset>
       
-      <fieldset class="lastjob" class="form">
+      <fieldset class="lastjob" class="form input-group mb-3">
         <legend>Ultimo Emprego</legend>
         <div class='inforesume'>
           <label for="CVresumo">Resumo do CV:</label>
@@ -59,17 +63,17 @@
           <textarea class='form-control' name="resume" id="CVresumo" cols="95" rows="5"></textarea>
         </div>
         
-        <div class="form-group">
+        <div class="form-group input-group mb-3">
           <label for="cargo">Cargo:</label>
           <input type="text" name="position" id="cargo" maxlength="40" required>
         </div>
 
-        <div class="form-group">
+        <div class="form-group input-group mb-3">
           <label for="descrposicao" class="">Descricao do Cargo:</label>
           <input type="text" name="descPosition" id="descrposicao" maxlength="500" required>
         </div>
         
-        <div class="form-group">
+        <div class="form-group input-group mb-3">
           <label for="diaInicial">Dia de Inicio</label>
           <input type="date" name="StartDate" id="diaInicial">
         </div>
@@ -82,6 +86,8 @@
       <br>
     </form>
   </main>
-  <script src="script.js"></script> 
+  <script src="script.js"></script>
+  <script src="/bootstrap-5.0.0-beta1-dist/js/bootstrap.min.js"></script>
+  <script src="jquery-3.5.1.min.js"></script>
 </body>
 </html>
