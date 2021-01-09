@@ -1,5 +1,6 @@
 body {
-  
+  text-align: justify;
+  /* margin: 0 30px; */
 }
 
 img {
@@ -10,8 +11,9 @@ figure {
   margin: 0;
 }
 
-@media screen and (max-width:400px) {
+@media screen and (max-width: 400px) {
   body {
+    background-color: yellowgreen;
     margin:0 30px;
   }
   figure {
@@ -26,5 +28,32 @@ figure {
   p {
     font-size: large
   }
-
 }
+
+@media screen and (min-width: 800px) {
+  .figure-wrap {
+    display: flex;
+    border: 1px solid;
+    padding: 15px;
+    background-color: green;
+  }
+  .main-cat-image {
+    display: flex;
+    flex-wrap: wrap;
+    /* width: 300px; */
+    padding: 15px;
+    background-color: blue;
+    flex-basis: 30%;
+  }
+  img {
+    
+    flex-wrap: wrap;
+    border-radius: 16px;
+    width: 100%;
+    padding: 23px;
+}
+
+  body{
+    background-color: red;
+  }
+
