@@ -1,0 +1,21 @@
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+@media screen and (max-width: 370px) {
+  *{
+    background-color: red;
+    margin: 3px;
+    border: 1px solid;
+    max-width: 360px;
+  }
+
+  ul {
+    display:flex;
+    flex-wrap: wrap;
+  }
+
+}
