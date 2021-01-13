@@ -37,7 +37,7 @@ const order = {
 const customerInfo = (order) => {
   // Adicione abaixo as informações necessárias.
   const deliveryPerson = order.order.delivery.deliveryPerson;
-  console.log(`Olá ${deliveryPerson}, entrega para ${order.name}, Telefone ${order.phoneNumber}, ${order.address.street}, Nº:${order.address.number}, AP:${order.address.apartment}`);
+  console.log(`Olá ${deliveryPerson}, entrega para ${order['name']}, Telefone ${order.phoneNumber}, ${order.address.street}, Nº:${order.address.number}, AP:${order.address.apartment}`);
 }
 
 
@@ -45,7 +45,12 @@ customerInfo(order);
 
 const orderModifier = (order) => {
   // Adicione abaixo as informações necessárias.
-
+  let deliveryPerson = order.order.delivery.deliveryPerson;
+  deliveryPerson = "Luis Silva";
+  let price = order.order.delivery['price'];
+  price = "R$50,00";
+  console.log(`Olá ${deliveryPerson}, entrega para ${order['name']}, Telefone ${order.phoneNumber}, ${order.address.street}, Nº:${order.address.number}, AP:${order.address.apartment}. Seu pedido cusou ${price}`);
+  
 }
 
 orderModifier(order);
