@@ -74,9 +74,9 @@ const expectedResult = [
 
 function formatedBookNames() {
   // escreva seu código aqui NOME_DO_LIVRO - GÊNERO_DO_LIVRO - NOME_DA_PESSOA_AUTORA
-  const compilateBooks = books.map(value => `${value.name} - ${value.genre} - ${value.author.name}`);
-  return compilateBooks;
+  return compilateBooks = books.map(value => `${value.name} - ${value.genre} - ${value.author.name}`);
+   
 }
-
+console.log(formatedBookNames());
 
 assert.deepStrictEqual(formatedBookNames(), expectedResult);
