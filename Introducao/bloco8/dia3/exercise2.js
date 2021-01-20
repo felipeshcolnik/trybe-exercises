@@ -67,9 +67,12 @@ const books = [
 
 function allNames() {
   // escreva seu código aqui
-  books.reduce((accum, nextValue) => {
-    return accum + nextValue.author.name;
-  }, [])
+  return books.reduce((acc, book, index, array) => {
+    if (index === array.length -1) {
+      return `${acc} ${book.author.name}.`
+    } return `${acc} ${book.author.name},`
+  }, 'Nomes:');
 }
+
 
 assert.deepStrictEqual(allNames(), "Nomes: George R. R. Martin, J. R. R. Tolkien, Isaac Asimov, Frank Herbert, Stephen King, H. P. Lovecraft.");
