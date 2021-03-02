@@ -1,16 +1,17 @@
 import React from 'react';
 
 import PokemonCard from './Pokemon';
+import './Pokedex.css';
 
 
 class Pokedex extends React.Component {
   render() {
-    
+    const { pokemonsProp } = this.props;
     return (
       <section>
-        {this.props.pokemonsProp.map(pokemon => {
-          return <PokemonCard pokemon1={pokemon}/>
-          })}
+        {pokemonsProp.map(pokemon => 
+           <PokemonCard pokemon1={pokemon}/>
+          )}
 
       </section>
     );
